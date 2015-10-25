@@ -9,8 +9,11 @@ case "$PURESHELL_PLATFORM_VERSION" in
     sudo rpm -Uvh epel-release-*.rpm
     ;;
 6)
-    sudo wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
-    sudo rpm -Uvh epel-release-*.rpm
+    # sudo wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-6.noarch.rpm
+    # sudo rpm -Uvh epel-release-*.rpm
+    sudo yum install epel-release -y
+    sudo sed -i "s/mirrorlist=https/mirrorlist=http/" /etc/yum.repos.d/epel.repo
+    sudo yum check-update
     ;;
 7)
     sudo wget https://dl.fedoraproject.org/pub/epel/epel-release-latest-7.noarch.rpm
