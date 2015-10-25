@@ -15,9 +15,16 @@ Cross-platform support for Linux distributions:
 
 # Installation
 
+
+##### Get the Source:
+
+Git:
+
+    git clone https://github.com/pureshell/pureshell.git
+    cd pureshell
+
 ##### Install:
 
-    $ cd <pureshell_dir>
     $ sh install
 
 ##### Configure:
